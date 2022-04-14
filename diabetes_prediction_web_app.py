@@ -46,3 +46,7 @@ def main():
         diagnosis = prediction_data(input_data)
 
     st.success(diagnosis)
+
+
+if __name__ == '__main__':
+    main()
