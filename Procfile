@@ -1,1 +1,1 @@
-web: sh setup.sh && streamlit run "D:\Diabetes_Prediction_Model\diabetes_prediction_web_app.py"
+web: sh setup.sh && streamlit run app.py
