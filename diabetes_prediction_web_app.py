@@ -26,3 +26,23 @@ def prediction_data(input_data):
 
 def main():
     st.title('Diabetes Prediction Web App')
+    # Getting the input data from user
+    Pregnancies = st.text_input('Number of Pregnancies:')
+    Glucose = st.text_input('Glucose:')
+    BloodPressure = st.text_input('BloodPressure:')
+    SkinThickness = st.text_input('SkinThickness:')
+    Insulin = st.text_input('Insulin:')
+    BMI = st.text_input('BMI:')
+    DiabetesPedigreeFunction = st.text_input('DiabetesPedigreeFunction:')
+    Age = st.text_input('Age:')
+
+    # Code for prediction
+    diagnosis = ''
+
+    # Creating the button for prediction
+    if st.button('Prediction Result'):
+        input_data = [Pregnancies, Glucose, BloodPressure,
+                      SkinThickness, Insulin, BMI, DiabetesPedigreeFunction, Age]
+        diagnosis = prediction_data(input_data)
+
+    st.success(diagnosis)
