@@ -1,6 +1,6 @@
 import pickle
 import numpy as np
-import streamlit
+import streamlit as st
 
 loaded_model = pickle.load(open('training_model.sav', 'rb'))
 
@@ -22,3 +22,7 @@ def prediction_data(input_data):
         return 'The person is not diabetic'
     else:
         return 'The person is diabetic'
+
+
+def main():
+    st.title('Diabetes Prediction Web App')
