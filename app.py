@@ -4,6 +4,9 @@ import streamlit as st
 
 loaded_model = pickle.load(open('training_model.sav', 'rb'))
 
+st.set_page_config(page_title='Diabetes Prediction App',
+                   page_icon="⚕️", initial_sidebar_state='auto')
+
 
 def prediction_data(input_data):
 
@@ -25,6 +28,7 @@ def prediction_data(input_data):
 
 
 def main():
+
     st.title('Diabetes Prediction Web App')
     # Getting the input data from user
     Pregnancies = st.text_input('Number of Pregnancies:')
